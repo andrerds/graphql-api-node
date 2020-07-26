@@ -1,0 +1,55 @@
+{
+  // temas
+
+  "workbench.iconTheme": "material-icon-theme",
+  // fonte
+  "editor.fontSize": 16,
+  "editor.lineHeight": 24,
+  "editor.fontFamily": "Fira Code, Dank Mono, Operator Mono, Inconsolata, Menlo",
+  "editor.fontLigatures": true,
+  "editor.letterSpacing": 0.5,
+
+  // eslint
+  "eslint.workingDirectories": ["apps/api"],
+  // formatações
+  "editor.formatOnSave": true,
+  "editor.formatOnPaste": true,
+  "editor.formatOnType": false,
+  "editor.autoIndent": "advanced",
+  "editor.tabSize": 2,
+  "editor.rulers": [80, 120],
+  "editor.wordWrap": "off",
+  "editor.tabCompletion": "on",
+
+  // terminal font size
+  "terminal.integrated.fontSize": 14,
+
+  // zoom
+  "window.zoomLevel": 0,
+
+  // others
+  "window.titleBarStyle": "custom",
+  "editor.codeActionsOnSave": {
+    "source.organizeImports": false
+  },
+  "editor.codeLens": false,
+  "editor.cursorBlinking": "phase",
+  "editor.cursorStyle": "line",
+  "editor.cursorSmoothCaretAnimation": true,
+  "editor.minimap.enabled": true,
+  "editor.renderWhitespace": "none",
+  "files.exclude": {
+    "**/.git": true,
+    "**/.DS_Store": true,
+    "**/*.js": {
+      "when": "$(basename).ts"
+    },
+    "**/*.js.map": {
+      "when": "$(basename)"
+    }
+  },
+  "files.hotExit": "onExit",
+  "files.defaultLanguage": "javascript",
+  "extensions.ignoreRecommendations": false,
+  "editor.defaultFormatter": "esbenp.prettier-vscode"
+}
