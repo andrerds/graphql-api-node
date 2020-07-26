@@ -1,3 +1,4 @@
+import { IModels } from './../types/modelsTypes'
 import mongoose from 'mongoose'
 import { resolve } from 'path'
 import { readdirSync } from 'fs'
@@ -12,7 +13,7 @@ const connect = (): Promise<typeof mongoose> =>
     useUnifiedTopology: true,
   })
 
-const models = Object.create({})
+const models: IModels = Object.create({})
 
 readdirSync(__dirname)
   .filter((fileName) => !fileName.includes('index'))
@@ -26,4 +27,4 @@ readdirSync(__dirname)
     console.log('Model: ', modelName)
   })
 
-export { connect }
+export { connect, models }

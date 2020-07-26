@@ -1,5 +1,6 @@
+import { OrderItemSubdocument } from './orderItemTypes'
 import { IUser } from './userTypes'
-import { Schema, Document } from 'mongoose'
+import { Schema, Document, Types } from 'mongoose'
 
 export enum OrderStatus {
   WAITING_PAYMENT, // AGUARDANDO PAGAMENTO
@@ -15,6 +16,7 @@ export interface IOrder {
   user: IUser | Schema.Types.ObjectId
   total: number
   status: OrderStatus
+  items: Types.DocumentArray<OrderItemSubdocument>
   createdAt: string
   updateAt: string
 }
